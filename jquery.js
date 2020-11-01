@@ -14,7 +14,7 @@ $('article p:last-child').remove()
 $('title').css("font-size", Math.floor(Math.random() * 100));
 
 //add an item to the list:
-$('ol').append($('<li>', { text: 'It can say whatever I want' });
+$('ol').append($('<li>', { text: 'It can say whatever I want' }));
 
 //empty the aside and create a paragraph apologize for the list's existence
 $('aside').empty().append($('<p>', { text: 'I apologize for the list' }));
