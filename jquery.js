@@ -57,20 +57,33 @@ $(function () {
     })
 
     
-    $('p').on('click', function() {
-        $(this).toggleClass('added')
+    $('p').on({
+        mouseenter: function() {
+            $(this).toggleClass('added');
+        },
+        mouseout: function() {
+            $(this).toggleClass('added');
+        }
+
     })
 
 
     $('input').on('focus', function() {
-        $(this).toggleClass('infocus')
+        $(this).toggleClass('infocus');
+        $(this).val('clicked');
     })
 
     $('input').on('blur', function() {
-        $(this).toggleClass('infocus')
+        $(this).toggleClass('infocus');
+        $(this).val('');
     })
 
+    //focus and blur are more specific to forms themselves 
 
+    $('#btn1').on('click', function() {
+        $('#output').append('Text appended to output ID');
+        
+    });
 
 });
 
