@@ -1,0 +1,17 @@
+
+.added {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.change-bg {
+    background-color: black;
+    color: yellow;
+    text-decoration: underline;
+}
+
+.infocus {
+    background-color: rgb(211, 210, 210);
+    color: red;
+    caret-color: indianred;
+}
