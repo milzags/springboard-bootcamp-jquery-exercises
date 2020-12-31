@@ -15,3 +15,9 @@
     color: red;
     caret-color: indianred;
 }
+
+.dark-mode {
+    background-color: black;
+    color: white;
+    transition: 0.5s all ease-in-out;
+}

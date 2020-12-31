@@ -40,7 +40,7 @@ $(function () {
         mouseout: function() {
             $(this).css('color','black');
         },
-    })
+    });
     
     //using this above ensures that you are only targetting and hiding one element.
     //if you use ('li') you will hide them all no matter which one you click on.
@@ -50,40 +50,60 @@ $(function () {
     $('#output').on('click', function() {
         $(this).html('This is changing inner HTML text');
         $(this).toggleClass('change-bg');
-    })
+    });
 
     $('h1').on('click', function() {
         $('h1').hide();
-    })
+    });
 
     
-    $('p').on({
-        mouseenter: function() {
-            $(this).toggleClass('added');
-        },
-        mouseout: function() {
-            $(this).toggleClass('added');
-        }
-
-    })
+    // $('p').on({
+    //     mouseenter: function() {
+    //         $(this).toggleClass('added');
+    //     },
+    //     mouseout: function() {
+    //         $(this).toggleClass('added');
+    //     }
+    // });
 
 
     $('input').on('focus', function() {
         $(this).toggleClass('infocus');
         $(this).val('clicked');
-    })
+    });
 
     $('input').on('blur', function() {
         $(this).toggleClass('infocus');
         $(this).val('');
-    })
+    });
 
     //focus and blur are more specific to forms themselves 
 
     $('#btn1').on('click', function() {
-        $('#output').append('Text appended to output ID');
+        // $('#output').append(' ');
+        $('#output').append(' Text appended to output ID. ');
         
     });
 
+    $('#btn2').on('click', function() {
+        $('#first').prepend('This is prepended to the first p element. ');
+    });
+
+    $('#btn3').on('click', function() {
+        $('#output').remove();
+        $('#first').remove();
+        
+    });
+
+    $('#btn4').on('click', function() {
+        $('body').toggleClass('dark-mode');
+        $('li').toggleClass('dark-mode');
+    });
+
+    $('li').on('click', function() {
+        $(this).siblings().last().css({'font-weight': 'bold','font-size': '35px'});
+    });
+
+    
 });
 
